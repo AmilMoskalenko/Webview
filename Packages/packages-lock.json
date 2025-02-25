@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.fonts.roboto": {
+      "version": "https://github.com/RageAgainstThePixel/com.fonts.roboto.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "2.1.6"
+      },
+      "hash": "880a1112ad2b16ca2c2ffeb39b0eca028c6ec518"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -179,6 +188,14 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.unity.textmeshpro": {
+      "version": "5.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0"
+      }
     },
     "com.unity.timeline": {
       "version": "1.8.7",

@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private List<GameObject> _errorsObj;
     [SerializeField] private Image _textImage;
     [SerializeField] private List<Sprite> _textSprites;
     [SerializeField] private List<GameObject> _labelsObj;
@@ -14,6 +17,8 @@ public class UIManager : MonoBehaviour
 
     private int _index;
     private int _indexL;
+    private int _errors;
+    private int _score;
 
     private void Start()
     {
@@ -42,8 +47,13 @@ public class UIManager : MonoBehaviour
         if ((_indexL == 0 && (_index == 3 || _index == 6 || _index == 9)) ||
             (_indexL == 1 && (_index == 0 || _index == 1 || _index == 2)))
         {
-            ChangeGame();
+            Score();
         }
+        else
+        {
+            Error();
+        }
+        ChangeGame();
     }
 
     private void Lavanda()
@@ -51,8 +61,13 @@ public class UIManager : MonoBehaviour
         if ((_indexL == 0 && (_index == 0 || _index == 7 || _index == 10)) ||
             (_indexL == 1 && (_index == 3 || _index == 4 || _index == 5)))
         {
-            ChangeGame();
+            Score();
         }
+        else
+        {
+            Error();
+        }
+        ChangeGame();
     }
 
     private void Yellow()
@@ -60,8 +75,13 @@ public class UIManager : MonoBehaviour
         if ((_indexL == 0 && (_index == 1 || _index == 4 || _index == 11)) ||
             (_indexL == 1 && (_index == 6 || _index == 7 || _index == 8)))
         {
-            ChangeGame();
+            Score();
         }
+        else
+        {
+            Error();
+        }
+        ChangeGame();
     }
 
     private void Mint()
@@ -69,7 +89,24 @@ public class UIManager : MonoBehaviour
         if ((_indexL == 0 && (_index == 2 || _index == 5 || _index == 8)) ||
             (_indexL == 1 && (_index == 9 || _index == 10 || _index == 11)))
         {
-            ChangeGame();
+            Score();
         }
+        else
+        {
+            Error();
+        }
+        ChangeGame();
+    }
+
+    private void Error()
+    {
+        _errors++;
+        _errorsObj.ForEach(obj => obj.SetActive(_errorsObj.IndexOf(obj) >= _errors));
+    }
+
+    private void Score()
+    {
+        _score++;
+        _scoreText.text = _score.ToString();
     }
 }
