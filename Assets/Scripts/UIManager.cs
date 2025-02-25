@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private Button _pauseButton;
     [SerializeField] private List<GameObject> _errorsObj;
     [SerializeField] private Image _textImage;
     [SerializeField] private List<Sprite> _textSprites;
@@ -14,6 +15,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button _lavandaButton;
     [SerializeField] private Button _yellowButton;
     [SerializeField] private Button _mintButton;
+    [SerializeField] private GameObject _pauseScreen;
+    [SerializeField] private Button _continueButton;
+    [SerializeField] private Button _leaveGameButton;
 
     private int _index;
     private int _indexL;
@@ -23,10 +27,12 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         ChangeGame();
+        _pauseButton.onClick.AddListener(() => Pause(true));
         _peachButton.onClick.AddListener(() => Peach());
         _lavandaButton.onClick.AddListener(() => Lavanda());
         _yellowButton.onClick.AddListener(() => Yellow());
         _mintButton.onClick.AddListener(() => Mint());
+        _continueButton.onClick.AddListener(() => Pause(false));
     }
 
     private void ChangeGame()
@@ -40,6 +46,12 @@ public class UIManager : MonoBehaviour
         _indexL = randL.Next(_labelsObj.Count);
         _labelsObj.ForEach(obj => obj.SetActive(false));
         _labelsObj[_indexL].SetActive(true);
+    }
+
+    private void Pause(bool pause)
+    {
+        _pauseScreen.SetActive(pause);
+        Time.timeScale = pause ? 0 : 1;
     }
 
     private void Peach()
