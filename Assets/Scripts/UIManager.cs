@@ -44,9 +44,9 @@ public class UIManager : MonoBehaviour
         _yellowButton.onClick.AddListener(() => ButtonClick(1, 4, 11, 6, 7, 8));
         _mintButton.onClick.AddListener(() => ButtonClick(2, 5, 8, 9, 10, 11));
         _continueButton.onClick.AddListener(() => Pause(false));
-        //_leaveGameButton.onClick.AddListener(() => );
-        _retryButton.onClick.AddListener(() => Retry());
-        //_mainMenuButton.onClick.AddListener(() => );
+        _leaveGameButton.onClick.AddListener(() => SceneManager.LoadScene("Menu"));
+        _retryButton.onClick.AddListener(() => SceneManager.LoadScene("Game"));
+        _mainMenuButton.onClick.AddListener(() => SceneManager.LoadScene("Menu"));
     }
 
     private void ChangeGame()
@@ -118,6 +118,7 @@ public class UIManager : MonoBehaviour
         {
             _failScreen.SetActive(true);
             _failScoreText.text = _score.ToString();
+            PlayerPrefs.SetInt("Score", _score);
         }
     }
 
@@ -126,10 +127,5 @@ public class UIManager : MonoBehaviour
         _score++;
         _scoreText.text = _score.ToString();
         _timer = Mathf.Max(_minTimer, _timer - _timerStep);
-    }
-
-    private void Retry()
-    {
-        SceneManager.LoadScene("Game");
     }
 }
