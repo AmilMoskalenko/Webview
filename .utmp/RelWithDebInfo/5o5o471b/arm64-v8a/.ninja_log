@@ -1,0 +1,10 @@
+# ninja log v5
+103	4446	7622641822089314	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	66fe40f2263b7ce9
+82	4469	7622641822192761	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	59625a6ac005d888
+1	4521	7622641822886173	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	f496cb24d5078c76
+150	4676	7622641824418432	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c278d6e2026bd789
+43	4769	7622641825381595	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f16d5b3c214773ea
+125	4818	7622641825877706	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a1957c67eb147259
+62	5500	7622641832759927	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f67a5fee8737fa5c
+24	5801	7622641835696562	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ae4171ef2c9ff878
+5802	6134	7622641839108973	C:/Users/Amil/Work/TraffHunters/Webview/Webview/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5o5o471b/obj/arm64-v8a/libgame.so	4875123bfbd7c22d
