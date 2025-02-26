@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private List<GameObject> _errorsObj;
     [SerializeField] private Image _textImage;
     [SerializeField] private List<Sprite> _textSprites;
+    [SerializeField] private SpriteAtlas _atlas;
     [SerializeField] private List<GameObject> _labelsObj;
     [SerializeField] private Button _peachButton;
     [SerializeField] private Button _lavandaButton;
@@ -58,7 +60,7 @@ public class UIManager : MonoBehaviour
             StopCoroutine(_timerCoroutine);
         System.Random rand = new System.Random();
         _index = rand.Next(_textSprites.Count);
-        _textImage.sprite = _textSprites[_index];
+        _textImage.sprite = _atlas.GetSprite(_textSprites[_index].name);
         _textImage.SetNativeSize();
         System.Random randL = new System.Random();
         _indexL = randL.Next(_labelsObj.Count);

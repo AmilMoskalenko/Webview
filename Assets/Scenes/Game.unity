@@ -171,7 +171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &52362457
 RectTransform:
@@ -246,7 +246,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &66541089
 RectTransform:
@@ -457,7 +457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &177338090
 RectTransform:
@@ -1003,7 +1003,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &365764457
 RectTransform:
@@ -1198,7 +1198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &396351265
 RectTransform:
@@ -1406,7 +1406,7 @@ RectTransform:
   m_GameObject: {fileID: 446139825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalScale: {x: 0.37, y: 0.37, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 330258470}
@@ -1414,7 +1414,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 130, y: 37}
+  m_SizeDelta: {x: 387, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446139827
 MonoBehaviour:
@@ -2264,7 +2264,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1103093361
 RectTransform:
@@ -2849,7 +2849,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1661252061
 RectTransform:
@@ -2924,7 +2924,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1673891478
 RectTransform:
@@ -3027,8 +3027,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6734edcd26aa5c43b93bcd50e910d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: 5
+  _minTimer: 1
+  _timerStep: 0.2
   _scoreText: {fileID: 1530765169}
   _pauseButton: {fileID: 778647718}
+  _timerSlider: {fileID: 660001347}
   _errorsObj:
   - {fileID: 1948083768}
   - {fileID: 2019133175}
@@ -3047,6 +3051,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3e6b7e69f210b0448eacbc5d3b843ed, type: 3}
   - {fileID: 21300000, guid: 4dc7c1437badd214f83a2cd914b8e510, type: 3}
   - {fileID: 21300000, guid: ea0f635e18ef61f458cc0cab768b89e4, type: 3}
+  _atlas: {fileID: 100100200, guid: cf9988935d096424b83337d0a9e9ffb7, type: 3}
   _labelsObj:
   - {fileID: 783218020}
   - {fileID: 1032669240}
@@ -3057,10 +3062,6 @@ MonoBehaviour:
   _pauseScreen: {fileID: 2043140688}
   _continueButton: {fileID: 700448986}
   _leaveGameButton: {fileID: 1015526210}
-  _timer: 5
-  _timerSlider: {fileID: 660001347}
-  _minTimer: 1
-  _timerStep: 0.2
   _failScreen: {fileID: 2016580504}
   _failScoreText: {fileID: 164771146}
   _retryButton: {fileID: 295284606}
