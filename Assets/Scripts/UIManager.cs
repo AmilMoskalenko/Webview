@@ -115,7 +115,8 @@ public class UIManager : MonoBehaviour
         {
             _failScreen.SetActive(true);
             _failScoreText.text = _score.ToString();
-            PlayerPrefs.SetInt("Score", _score);
+            if (_score > PlayerPrefs.GetInt("Score"))
+                PlayerPrefs.SetInt("Score", _score);
         }
     }
 }
